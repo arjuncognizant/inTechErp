@@ -1,0 +1,25 @@
+header {
+  margin-bottom: 1rem;
+}
+
+
+
+  .navbar-default {
+    background-color: #0fffff;
+    border-color: #030044;
+
+
+  
+    text-decoration: none;
+    background-color: silver; /*Change rollover cell color here*/
+  }
+
+.navbar-custom {
+    color: #FF00f;
+    background-color: #CC3333;
+}
+
+.form-control::-webkit-input-placeholder { color: #EEE; }
+.form-control::-moz-placeholder { color: #EEE; }
+.form-control:-ms-input-placeholder { color: #EEE; }
+.form-control:-moz-placeholder { color: #EEE; }

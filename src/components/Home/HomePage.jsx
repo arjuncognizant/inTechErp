@@ -1,16 +1,24 @@
 import React from 'react';
 
-export default function HomePage() {
-  return (
-    <section className="page-content">
-      <div className="row">
-        <div className="col-sm-12 col-lg-8">
-          This is the home page.
-        </div>
-        <aside className="col-sm-12 col-lg-4">
-          This is the sidebar
-        </aside>
+import { Button } from 'reactstrap';
+
+import Sidebar from '../shared/Sidebar';
+
+export default function HomePage(props) {
+  const { decrementFunction, incrementFunction } = props;
+    return (
+    <div className="row">
+      <div className="col-sm-12 col-md-8">
+         <Button onClick={incrementFunction}>Increment</Button>  
+         <Button onClick={decrementFunction}>Decrement</Button>
       </div>
-    </section>
+      <Sidebar />
+    </div>
   );
+
+const showAlert = () => {
+  alert('You clicked the button. Well done, Draco!');
+};
+
 }
+

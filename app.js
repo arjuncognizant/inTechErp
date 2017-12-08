@@ -18,7 +18,7 @@ const webpack = require('webpack');
 const webpackConfig = require('./webpack.config');
 const webpackDevMiddleware = require('webpack-dev-middleware');
 const webpackHotMiddleware = require('webpack-hot-middleware');
-
+const authentication = require('./routes/api/authentication');
 
 const  app = express();
 //Connect to Mongoose
@@ -66,6 +66,8 @@ app.use('/*', index);
 app.use('/users', user);
 app.use('/api',api);
 app.use('/api/user',intechuser);
+
+app.use('/api/authentication', authentication);
 
 const User = require('./models/intechuser');
 passport.use(new localstrategy(User.authenticate()));
